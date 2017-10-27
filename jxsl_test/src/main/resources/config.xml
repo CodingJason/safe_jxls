@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbook>
+    <worksheet name="Sheet1">
+        <section startRow="0" endRow="0"/>
+        <loop startRow="0" endRow="0" items="videoInfoList" var="dto" varType="com.jasoncoding.test.ExcelImportDTO">
+            <section startRow="1" endRow="1">
+                <mapping row="1" col="0">dto.patientId</mapping>
+                <mapping row="1" col="1">dto.serviceType</mapping>
+                <mapping row="1" col="2">dto.mainDisease</mapping>
+                <mapping row="1" col="3">dto.insuranceType</mapping>
+                <mapping row="1" col="4">dto.medicalType</mapping>
+                <mapping row="1" col="5">dto.depart</mapping>
+                <mapping row="1" col="6">dto.hospital</mapping>
+                <mapping row="1" col="7">dto.district</mapping>
+                <mapping row="1" col="8">dto.doctorName</mapping>
+                <mapping row="1" col="9">dto.innerDisease</mapping>
+                <mapping row="1" col="10">dto.outerDisease</mapping>
+                <mapping row="1" col="11">dto.anesthesia</mapping>
+                <mapping row="1" col="12">dto.serviceName</mapping>
+                <mapping row="1" col="13">dto.serviceDays</mapping>
+                <mapping row="1" col="14">dto.hospitalPrice</mapping>
+                <mapping row="1" col="15">dto.payType</mapping>
+                <mapping row="1" col="16">dto.payAmount</mapping>
+                <mapping row="1" col="17">dto.payAmountPart</mapping>
+                <mapping row="1" col="18">dto.payAmountPartPrice</mapping>
+                <mapping row="1" col="19">dto.project</mapping>
+                <mapping row="1" col="20">dto.projectType</mapping>
+                <mapping row="1" col="21">dto.projectInsuranceType</mapping>
+                <mapping row="1" col="22">dto.projectPrice</mapping>
+                <mapping row="1" col="23">dto.projectCount</mapping>
+                <mapping row="1" col="24">dto.patientPayRatio</mapping>
+            </section>
+            <loopbreakcondition>
+                <rowcheck offset="0">
+                    <cellcheck offset="0">break</cellcheck>
+                </rowcheck>
+            </loopbreakcondition>
+        </loop>
+    </worksheet>
+</workbook>

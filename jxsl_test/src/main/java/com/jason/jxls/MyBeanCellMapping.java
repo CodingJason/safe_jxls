@@ -12,6 +12,7 @@ public class MyBeanCellMapping extends BeanCellMapping {
         super(rowNum, cellNum, beanKey, propertyName);
     }
 
+
     @Override
     public Class getPropertyType(Map beans) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, ClassNotFoundException {
         Object bean;
@@ -19,6 +20,7 @@ public class MyBeanCellMapping extends BeanCellMapping {
             bean = beans.get(getBeanKey());
             // ZJ
             if (getType() == null) {
+                // 如果使用 Map 这里的 clazz 可能为 null 所以需要判断
                 Class clazz = PropertyUtils.getPropertyType(bean, getPropertyName());
                 return clazz == null?String.class:clazz;
             } else {

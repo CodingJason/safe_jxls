@@ -14,7 +14,7 @@ public class MySimpleSectionCheck extends SimpleSectionCheck {
 
     @Override
     public boolean isCheckSuccessful(XLSRowCursor cursor) {
-        // row num can not greater than sheet last row num;
+        // 判断行数是否已经大于最后一行. fix 无法跳出 bug.
         if(cursor.getSheet().getLastRowNum() >= cursor.getCurrentRowNum()) {
             return super.isCheckSuccessful(cursor);
         }
